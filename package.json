@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack -p 9002",
+    "dev": "node api.js && next dev --turbopack -p 9002",
     "genkit:dev": "genkit start -- tsx src/ai/dev.ts",
     "genkit:watch": "genkit start -- tsx --watch src/ai/dev.ts",
-    "build": "next build",
-    "start": "next start",
+    "build": "node api.js && next build",
+    "start": "node api.js && next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit"
   },
@@ -45,7 +45,7 @@
     "embla-carousel-react": "^8.6.0",
     "firebase": "^11.9.1",
     "genkit": "^1.14.1",
-    "livekit-client": "^2.5.0",
+    "livekit-client": "^2.15.3",
     "livekit-server-sdk": "^2.13.1",
     "lucide-react": "^0.475.0",
     "next": "15.3.3",
